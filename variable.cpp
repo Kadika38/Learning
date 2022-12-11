@@ -2,11 +2,12 @@
 
 int main() {
   
-  int tip = 0;
+  double tempf = 34;
+  double tempc;
   
-  std::cout << "Enter tip amount: ";
+  //calc in celcius
+  tempc = (tempf - 32) / 1.8;
   
-  std::cin >> tip;
+  std::cout << "The temp is " << tempc << " degrees Celsius.\n";
   
-  std::cout << "You paid " << tip << " dollars.\n";
 }
