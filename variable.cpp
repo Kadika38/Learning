@@ -1,24 +1,25 @@
 #include <iostream>
-#include <cmath>
 
 int main() {
   
-  double a;
-  double b;
-  double c;
+  double pesos;
+  double reais;
+  double soles;
+  double dollars;
+
+  std::cout << "Enter the number of Colombian Pesos: ";
+  std::cin >> pesos;
+
+  std::cout << "Enter the number of Brazilian Reais: ";
+  std::cin >> reais;
+
+  std::cout << "Enter the number of Peruvian Soles: ";
+  std::cin >> soles;
+
+  //conversions: 0.00021 pesos | 0.19 reais | 0.26 soles
+
+  dollars = (pesos * 0.00021) + (reais * 0.19) + (soles * 0.26);
+
+  std::cout << "US Dollars = $" << dollars << "\n";
   
-  std::cout << "Enter a: ";
-  std::cin >> a;
-  std::cout << "Enter b: ";
-  std::cin >> b;
-  std::cout << "Enter c: ";
-  std::cin >> c;
-
-  double root1 = (-b + (std::sqrt((b * b) - (4 * a * c)))) / (2 * a);
-
-  double root2 = (-b - (std::sqrt((b * b) - (4 * a * c)))) / (2 * a);;
-
-  std::cout << "Root 1 is " << root1 << "\n";
-  std::cout << "Root 2 is " << root2 << "\n";
-
 }
