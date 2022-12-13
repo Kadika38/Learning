@@ -2,10 +2,21 @@
 
 int main() {
 
-  // Write a for loop here:
-  for (int i = 99; i > 0; i--) {
+  for (int i = 1; i < 101; i++) {
 
-    std::cout << i << " bottles of pop on the wall.\nTake one down and pass it around.\n" << (i - 1) << " bottles of pop on the wall.\n";
+    if (i % 3 != 0 && i % 5 != 0) {
+      std::cout << i;
+    }
+
+    if (i % 3 == 0) {
+      std::cout << "Fizz";
+    }
+
+    if (i % 5 == 0) {
+      std::cout << "Buzz";
+    }
+    
+    std::cout << "\n";
 
   }
 
