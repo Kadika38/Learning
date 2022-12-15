@@ -1,23 +1,33 @@
 #include <iostream>
 #include <vector>
+#include <string>
 
-//Program that finds the sum of even numbers and the product of the odd numbers in a vector.
 int main() {
 
-  std::vector<int> nums = {2, 4, 3, 6, 1, 9};
+  std::string original = "execute order sixty-six";
 
-  int evens = 0;
-  int odds = 1;
+  std::vector<char> vowels = {'a', 'e', 'i', 'o', 'u'};
 
-  for (int i = 0; i < nums.size(); i++) {
-    if (nums[i] % 2 == 0) {
-      evens = evens + nums[i];
+  std::vector<char> result;
+
+  for (int i = 0; i < original.size(); i++) {
+    std::cout << "O: " << original[i] << " -> ";
+    for (int j = 0; j < vowels.size(); j++) {
+      if (original[i] == vowels[j]) {
+        result.push_back(vowels[j]);
+        std::cout << vowels[j];
+        if (vowels[j] == 'e' || vowels[j] == 'u') {
+          result.push_back(vowels[j]);
+          std::cout << vowels[j];
+        }
+      }
     }
-    if (nums[i] % 2 != 0) {
-      odds = odds * nums[i];
-    }
+    std::cout << "\n";
   }
 
-  std::cout << "Sum of even numbers is " << evens <<"\nProduct of odd numbers is " << odds;
+  for (int f = 0; f < result.size(); f++) {
+    std::cout << result[f];
+  }
+  std::cout << "\n";
 
 }
