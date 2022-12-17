@@ -1,21 +1,19 @@
 #include <iostream>
 
-// Define is_palindrome() here:
-bool is_palindrome(std::string text) {
-  bool q = true;
-  for (int i = 0; i < (text.size() / 2); i++) {
-    if (!(text[i] == text[text.size() - 1 - i])) {
-      q = false;
-    }
-  }
-  return q;
-}
-
+#include "coffee.hpp"
 
 int main() {
   
-  std::cout << is_palindrome("madam") << "\n";
-  std::cout << is_palindrome("ada") << "\n";
-  std::cout << is_palindrome("lovelace") << "\n";
+  // coffee black
+  std::cout << make_coffee();
+  
+  // coffee with milk
+  std::cout << make_coffee(true);
+  
+  // coffee with milk and sugar
+  std::cout << make_coffee(true, true);
+  
+  // coffee with sugar
+  std::cout << make_coffee(false, true);
   
 }
