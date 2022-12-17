@@ -1,19 +1,10 @@
 #include <iostream>
 
-#include "coffee.hpp"
+#include "./numbers.hpp"
 
 int main() {
   
-  // coffee black
-  std::cout << make_coffee();
-  
-  // coffee with milk
-  std::cout << make_coffee(true);
-  
-  // coffee with milk and sugar
-  std::cout << make_coffee(true, true);
-  
-  // coffee with sugar
-  std::cout << make_coffee(false, true);
+  std::cout << get_smallest(100, 60) << "\n";
+  std::cout << get_smallest(2543.2, 3254.3) << "\n";
   
 }
