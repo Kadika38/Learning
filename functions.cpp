@@ -1,19 +1,21 @@
 #include <iostream>
-#include <vector>
 
-// Define first_three_multiples() here:
-std::vector<int> first_three_multiples(int num) {
-  std::vector<int> hold;
-  hold.push_back(num);
-  hold.push_back(num * 2);
-  hold.push_back(num * 3);
-  return hold;
+// Define is_palindrome() here:
+bool is_palindrome(std::string text) {
+  bool q = true;
+  for (int i = 0; i < (text.size() / 2); i++) {
+    if (!(text[i] == text[text.size() - 1 - i])) {
+      q = false;
+    }
+  }
+  return q;
 }
+
 
 int main() {
   
-  for (int element : first_three_multiples(8)) {
-    std::cout << element << "\n";
-  }
+  std::cout << is_palindrome("madam") << "\n";
+  std::cout << is_palindrome("ada") << "\n";
+  std::cout << is_palindrome("lovelace") << "\n";
   
 }
