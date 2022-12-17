@@ -1,19 +1,19 @@
 #include <iostream>
-#include <cmath>
+#include <vector>
 
-// Define tenth_power() here:
-int tenth_power(int num) {
-  int hold = num;
-  for (int i = 9; i > 0; i--) {
-    hold = hold * num;
-  }
+// Define first_three_multiples() here:
+std::vector<int> first_three_multiples(int num) {
+  std::vector<int> hold;
+  hold.push_back(num);
+  hold.push_back(num * 2);
+  hold.push_back(num * 3);
   return hold;
 }
 
 int main() {
   
-  std::cout << tenth_power(0) << "\n";
-  std::cout << tenth_power(1) << "\n";
-  std::cout << tenth_power(2) << "\n";
+  for (int element : first_three_multiples(8)) {
+    std::cout << element << "\n";
+  }
   
 }
