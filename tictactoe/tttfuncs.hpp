@@ -1,1 +1,2 @@
 void intro();
+int play();
