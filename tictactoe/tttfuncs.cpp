@@ -93,7 +93,6 @@ std::vector<int> turn(std::vector<int> b, int player) {
 //win_eval() evaluates the board to check for a win, returns the winner, or 0 if no winner
 int win_eval(std::vector<int> b) {
   if (b[0] == 1 || b[0] == 2) {
-    std::cout << "\ngets #1\n";
     if (b[1] == b[0] && b[2] == b[0]) {
       return b[0];
     } else if (b[3] == b[0] && b[6] == b[0]) {
@@ -102,7 +101,6 @@ int win_eval(std::vector<int> b) {
       return b[0];
     }
   } if ((b[1] == 1 || b[1] == 2) && (b[4] == b[1] && b[7] == b[1])) {
-    std::cout << "\ngets here?\n";
     return b[1];
   } if (b[2] == 1 || b[2] == 2) {
     if (b[4] == b[2] && b[6] == b[2]) {
@@ -132,8 +130,6 @@ int play() {
   while (winner == 0 && turns < 10) {
     b = turn(b, whoPlaysNext);
     winner = win_eval(b);
-    std::cout << "winner: " << winner << "\n";
-    std::cout << "win_eval(): " << win_eval(b) << "\n";
     board(b);
     turns++;
     whoPlaysNext == 1 ? whoPlaysNext = 2 : whoPlaysNext = 1;
