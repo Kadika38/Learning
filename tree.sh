@@ -1,15 +1,21 @@
 #!/bin/bash
 
+echo
+
+# If input argument exists, cd into that directory
 if [ "$1" != "" ]
-then
-  cd "$1"
+   then cd "$1"
 fi
 
 pwd
 
-if [ `ls -F -1 | grep "/" | wc -l` = 0 ]
-then
-  echo "   -> no sub-directories"
+# If no subdirectories, print "no sub-directories"
+if [ `ls -F -1 | grep "/" | wc -l` = 0 ]   # Check if no folders
+   then echo "   -> no sub-directories"
 fi
 
-ls -R
+# ls -R print recursively
+# filter for directories and modify output for readability
+ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'
+
+echo
