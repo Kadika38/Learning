@@ -90,3 +90,46 @@ def combine_sort(lst1, lst2):
     lst1.append(item)
   lst1.sort()
   return lst1
+
+def every_three_nums(start):
+  if start > 100: return []
+  lst = [start]
+  start += 3
+  while start <= 100:
+    lst.append(start)
+    start += 3
+  return lst
+
+def remove_middle(lst, start, end):
+  temp = lst[0:start] + lst[end+1:-1]
+  temp.append(lst[-1])
+  return temp
+
+def more_frequent_item(lst, item1, item2):
+  c1 = 0
+  c2 = 0
+  for item in lst:
+    if item == item1: c1 += 1
+    if item == item2: c2 += 1
+  if c2 > c1:
+    return item2
+  return item1
+
+def double_index(lst, index):
+  if index >= len(lst):
+    return lst
+  lst[index] = lst[index] * 2
+  return lst
+
+ef middle_element(lst):
+  if len(lst) % 2 == 0:
+    h = len(lst) / 2
+    h = int(h)
+    one = lst[h]
+    two = lst[h-1]
+    return (one + two) / 2
+  else:
+    mid = len(lst) - 1
+    mid = mid / 2
+    mid = int(mid)
+    return lst[mid]
