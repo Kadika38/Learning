@@ -221,3 +221,24 @@ def reversed_list(lst1, lst2):
       return False
     c -= 1
   return True
+
+# function challenges
+
+def tenth_power(num):
+  return num ** 10
+
+def square_root(num):
+  return num ** 0.5
+
+def win_percentage(wins, losses):
+  total = wins + losses
+  return (wins / total) * 100
+
+def average(num1, num2):
+  return (num1 + num2) / 2
+
+def remainder(num1, num2):
+  n1 = num1 * 2
+  n2 = num2 / 2
+  return n1 % n2
+
