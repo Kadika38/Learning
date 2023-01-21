@@ -242,3 +242,24 @@ def remainder(num1, num2):
   n2 = num2 / 2
   return n1 % n2
 
+def first_three_multiples(num):
+  print(num)
+  print(num * 2)
+  print(num * 3)
+  return num * 3
+
+def tip(total, percentage):
+  return total * (percentage / 100)
+
+def introduction(first_name, last_name):
+  nstr = last_name + ", " + first_name + " " + last_name
+  return nstr
+
+def dog_years(name, age):
+  return name + ", you are " + str(age * 7) + " years old in dog years"
+
+def lots_of_math(a, b, c, d):
+  print(a + b)
+  print(c - d)
+  print((a + b) * (c - d))
+  return (((a + b) * (c - d)) % a)
