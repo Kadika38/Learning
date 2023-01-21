@@ -175,3 +175,49 @@ def exponents(bases, powers):
     for power in powers:
       nlst.append(base ** power)
   return nlst
+
+def larger_sum(lst1, lst2):
+  l1 = 0
+  l2 = 0
+  for item in lst1:
+    l1 += item
+  for item in lst2:
+    l2 += item
+  if l2 > l1:
+    return lst2
+  return lst1
+
+def over_nine_thousand(lst):
+  if len(lst) == 0:
+    return 0
+  elif len(lst) > 0:
+    s = 0
+    for item in lst:
+      s += item
+      if s > 9000:
+        return s
+    return s
+
+def max_num(nums):
+  l = nums[0]
+  for item in nums:
+    if item > l:
+      l = item
+  return l
+
+def same_values(lst1, lst2):
+  nlst = []
+  c = 0
+  while c < len(lst1):
+    if lst1[c] == lst2[c]:
+      nlst.append(c)
+    c += 1
+  return nlst
+
+def reversed_list(lst1, lst2):
+  c = len(lst2) - 1
+  for item in lst1:
+    if item != lst2[c]:
+      return False
+    c -= 1
+  return True
