@@ -133,3 +133,45 @@ ef middle_element(lst):
     mid = mid / 2
     mid = int(mid)
     return lst[mid]
+
+#loops challenges
+
+def divisible_by_ten(nums):
+  c = 0
+  for i in nums:
+    if i % 10 == 0:
+      c += 1
+  return c
+
+def add_greetings(names):
+  lst = []
+  for name in names:
+    lst.append("Hello, " + name)
+  return lst
+
+def delete_starting_evens(lst):
+  c = 0
+  for item in lst:
+    if item % 2 == 0:
+      c += 1
+    else:
+      break
+  while c > 0:
+    lst.pop(0)
+    c -= 1
+  return lst
+
+def odd_indices(lst):
+  nlst = []
+  l = 1
+  while l < len(lst):
+    nlst.append(lst[l])
+    l += 2
+  return nlst
+
+def exponents(bases, powers):
+  nlst = []
+  for base in bases:
+    for power in powers:
+      nlst.append(base ** power)
+  return nlst
