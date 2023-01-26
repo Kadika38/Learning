@@ -14,8 +14,8 @@ class Playlist {
     System.out.println(desertIslandPlaylist.size());
     desertIslandPlaylist.remove("608");
     //switch placement of two songs
-    int rtwu = desertIslandPlaylist.get("roll the windows up");
-    int omg = desertIslandPlaylist.get("OMG");
+    int rtwu = desertIslandPlaylist.indexOf("roll the windows up");
+    int omg = desertIslandPlaylist.indexOf("OMG");
     String a = "OMG";
     desertIslandPlaylist.set(omg, desertIslandPlaylist.get(rtwu));
     desertIslandPlaylist.set(rtwu, a);
